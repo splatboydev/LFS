@@ -30,6 +30,10 @@ jobs:
       - name: Verbose logging
         run: sudo ./mylfs.sh -V
         
+      # Clean pre-existing images
+      - name: Clean image
+        run: sudo ./mylfs -c
+        
       # Build LFS
       - name: Build LFS
         run: sudo ./mylfs.sh -b
