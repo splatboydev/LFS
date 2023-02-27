@@ -32,7 +32,7 @@ jobs:
         
       # Clean pre-existing images
       - name: Clean image
-        run: sudo ./mylfs -c
+        run: sudo ./mylfs.sh -c
         
       # Build LFS
       - name: Build LFS
