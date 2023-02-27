@@ -24,8 +24,12 @@ jobs:
 
       # Check requirements
       - name: Check for prerequisites
-        run: sudo ./mylfs.sh --check
+        run: sudo ./mylfs.sh -e
       
-      # Build all
-      - name: Build
-        run: sudo ./mylfs.sh --build-all
+      # Enable verbose
+      - name: Verbose logging
+        run: sudo ./mylfs.sh -V
+        
+      # Build LFS
+      - name: Build LFS
+        run: sudo ./mylfs.sh -b
